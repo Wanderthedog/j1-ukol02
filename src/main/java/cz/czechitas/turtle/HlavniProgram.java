@@ -14,8 +14,8 @@ public class HlavniProgram {
     public void start() {
 
         //nakresliSnehulaka(new Color(255, 196, 0));
-        //nakresliMasinku();
-        nakresliZmrzlinu(Color.cyan);
+        nakresliMasinku();
+        //nakresliZmrzlinu(Color.cyan);
 
         // vypocitejDelkuPrepony();
     }
