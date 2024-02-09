@@ -12,18 +12,13 @@ public class HlavniProgram {
     }
 
     public void start() {
-        //zofkaNaVychoziPozici();
+
         //nakresliSnehulaka(new Color(255, 196, 0));
-        nakresliMasinku();
+        //nakresliMasinku();
+        nakresliZmrzlinu(Color.cyan);
 
-        //  vypocitejDelkuPrepony();
+       // vypocitejDelkuPrepony();
     }
-       /*  //TODO Tady bude kód pro kreslení želví grafiky.Ze dne 30102024
-        nakresliCtverecek(100,new Color(255, 196, 0));
-        nakresliCtverecek(200,Color.BLACK);
-        nakresliCtverecek(30,Color.YELLOW);
-    }*/
-
 
     public void nakresliCtverecek(int delkaStrany, Color barva) {
         zofka.setPenColor(barva);
@@ -31,6 +26,14 @@ public class HlavniProgram {
             zofka.move(delkaStrany);
             zofka.turnRight(90);
         }
+    }
+
+    public void nakresliZmrzlinu(Color barva) {
+        zofka.setPenColor(barva);
+       // nakresliKolečko(100);
+        zofkaNaVychoziPozici();
+        nakresliRovnoramennyTrojuhelnik(424.264,300,Color.CYAN);
+
     }
 
     public void nakresliObdelnik(double delkaStranyA, double delkaStranyB, Color barva) {
@@ -126,6 +129,7 @@ public class HlavniProgram {
 
     }
 
+
     public void nakresliKoleckaLokomotivy(Color barva) {
         zofka.setPenColor(barva);
         zofka.penUp();
@@ -175,7 +179,7 @@ public class HlavniProgram {
 
     public double vypocitejDelkuPrepony() {
         double delkaPrepony;
-        double velikostStrany = 150;
+        double velikostStrany = 300;
         delkaPrepony = Math.sqrt(2 * Math.pow(velikostStrany, 2));
         System.out.println(delkaPrepony);
         return delkaPrepony;
