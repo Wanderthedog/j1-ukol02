@@ -17,7 +17,7 @@ public class HlavniProgram {
         //nakresliMasinku();
         nakresliZmrzlinu(Color.cyan);
 
-       // vypocitejDelkuPrepony();
+        // vypocitejDelkuPrepony();
     }
 
     public void nakresliCtverecek(int delkaStrany, Color barva) {
@@ -30,9 +30,9 @@ public class HlavniProgram {
 
     public void nakresliZmrzlinu(Color barva) {
         zofka.setPenColor(barva);
-       // nakresliKolečko(100);
+        // nakresliKolečko(100);
         zofkaNaVychoziPozici();
-        nakresliRovnoramennyTrojuhelnik(424.264,300,Color.CYAN);
+        nakresliRovnoramennyTrojuhelnik(424.264, 300, Color.CYAN);
 
     }
 
@@ -62,7 +62,7 @@ public class HlavniProgram {
         }
     }
 
-    public void nakresliKolečkoRuce(double polomer) {
+    public void nakresliKoleckoRuce(double polomer) {
         //zofka.penUp();
         //zofka.turnLeft(35);
         //zofka.move(460);
@@ -79,12 +79,12 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(polomer);
         zofka.penDown();
-        nakresliKolečko(30);
+        nakresliKolecko(30);
         zofka.turnRight(180);
         zofka.penUp();
         zofka.move(polomer * 3);
         zofka.penDown();
-        nakresliKolečko(30);
+        nakresliKolecko(30);
         zofka.turnRight(180);
         zofka.penUp();
         zofka.move(polomer * 2);
@@ -96,9 +96,9 @@ public class HlavniProgram {
     public void nakresliSnehulaka(Color barva) {
         zofkaNaVychoziPozici();
         zofka.setPenColor(barva);
-        nakresliKolečko(90);
-        nakresliKolečkoRuce(60);
-        nakresliKolečko(40);
+        nakresliKolecko(90);
+        nakresliKoleckoRuce(60);
+        nakresliKolecko(40);
     }
 
     public void nakresliMasinku() {
@@ -129,28 +129,27 @@ public class HlavniProgram {
 
     }
 
-
     public void nakresliKoleckaLokomotivy(Color barva) {
         zofka.setPenColor(barva);
         zofka.penUp();
         zofka.turnLeft(90);
         zofka.move(110);
         zofka.penDown();
-        nakresliKolečko(30);
+        nakresliKolecko(30);
         zofka.penUp();
         zofka.move(50);
         zofka.penDown();
-        nakresliKolečko(30);
+        nakresliKolecko(30);
         zofka.penUp();
         zofka.move(120);
         zofka.turnRight(90);
         zofka.move(50);
         zofka.turnRight(180);
         zofka.penDown();
-        nakresliKolečko(100);
+        nakresliKolecko(100);
     }
 
-    public void nakresliKolečko(double polomer) {
+    public void nakresliKolecko(double polomer) {
         //zofka.penUp();
         //zofka.turnLeft(35);
         //zofka.move(460);
@@ -196,4 +195,3 @@ public class HlavniProgram {
         zofka.penDown();
     }
 }
-
