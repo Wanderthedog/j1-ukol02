@@ -20,20 +20,11 @@ public class HlavniProgram {
         // vypocitejDelkuPrepony();
     }
 
-    public void nakresliCtverecek(int delkaStrany, Color barva) {
-        zofka.setPenColor(barva);
-        for (int i = 0; i < 4; i++) {
-            zofka.move(delkaStrany);
-            zofka.turnRight(90);
-        }
-    }
-
     public void nakresliZmrzlinu(Color barva) {
         zofka.setPenColor(barva);
         // nakresliKolečko(100);
         zofkaNaVychoziPozici();
         nakresliRovnoramennyTrojuhelnik(424.264, 300, Color.CYAN);
-
     }
 
     public void nakresliObdelnik(double delkaStranyA, double delkaStranyB, Color barva) {
@@ -50,16 +41,6 @@ public class HlavniProgram {
         zofka.move(200);
         zofka.turnLeft(90);
         zofka.penDown();
-    }
-
-
-    public void nakresliRovnostrannyTrojuhelnik(double delkaStrany, Color barva) {
-        zofka.setPenColor(barva);
-
-        for (int i = 0; i < 3; i++) {
-            zofka.move(delkaStrany);
-            zofka.turnLeft(120);
-        }
     }
 
     public void nakresliKoleckoRuce(double polomer) {
@@ -166,25 +147,12 @@ public class HlavniProgram {
         zofka.penDown();
     }
 
-    public void zofkaOtocitHlavouNahoru() {
-        zofka.penUp();
-        zofka.turnLeft(90);
-        zofka.move(100);
-        zofka.turnRight(115);
-        zofka.move(100);
-        zofka.move(60);
-        zofka.penDown();
-    }
-
     public double vypocitejDelkuPrepony() {
         double delkaPrepony;
         double velikostStrany = 300;
         delkaPrepony = Math.sqrt(2 * Math.pow(velikostStrany, 2));
         System.out.println(delkaPrepony);
         return delkaPrepony;
-    }
-
-    public void vypocitejUhelVrcholu() {
     }
 
     public void zofkaNaVychoziPozici() {
