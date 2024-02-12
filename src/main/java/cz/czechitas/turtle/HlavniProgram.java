@@ -13,12 +13,13 @@ public class HlavniProgram {
 
     public void start() {
 
-       nakresliSnehulaka(new Color(255, 0, 255));
-       nakresliZmrzlinu(Color.yellow);
-      // nakresliMasinku();
+        nakresliSnehulaka(new Color(255, 0, 255));
+        nakresliZmrzlinu(Color.yellow);
+        // nakresliMasinku();
     }
-        public void nakresliZmrzlinu(Color barva) {
-        poziceProKresleniZmrliny();
+
+    public void nakresliZmrzlinu(Color barva) {
+        presunSeNaPoziciProKresleniZmrliny();
         zofka.setPenColor(barva);
         nakresliKolecko(52.09);
         zofka.penUp();
@@ -29,11 +30,11 @@ public class HlavniProgram {
         zofka.turnRight(180);
         zofka.penDown();
         zofka.turnLeft(90);
-        nakresliRovnoramennyTrojuhelnikZmrzlina(104.189,300, new Color(165,42,42));
+        nakresliRovnoramennyTrojuhelnikZmrzlina(104.189, 300, new Color(165, 42, 42));
         zofka.setPenColor(barva);
     }
 
-    public void nakresliRovnoramennyTrojuhelnikZmrzlina(double delkaStranyA, double delkaStranyB, Color barva){
+    public void nakresliRovnoramennyTrojuhelnikZmrzlina(double delkaStranyA, double delkaStranyB, Color barva) {
         zofka.setPenColor(barva);
         zofka.turnRight(90);
         zofka.move(delkaStranyA);
@@ -42,6 +43,7 @@ public class HlavniProgram {
         zofka.turnRight(160);
         zofka.move(delkaStranyB);
     }
+
     public void nakresliObdelnik(double delkaStranyA, double delkaStranyB, Color barva) {
         zofka.setPenColor(barva);
         for (double i = 0; i < 2; i++) {
@@ -51,6 +53,7 @@ public class HlavniProgram {
             zofka.move(delkaStranyA);
         }
     }
+
     public void nakresliKoleckoRuce(Color barva) {
         zofka.setPenColor(barva);
         nakresliKolecko(60);
@@ -75,7 +78,7 @@ public class HlavniProgram {
     }
 
     public void nakresliSnehulaka(Color barva) {
-        poziceProKresleniSnehulaka();
+        presunSeNaPoziciProKresleniSnehulaka();
         zofka.setPenColor(barva);
         nakresliKolecko(90);
         zofka.turnRight(90);
@@ -84,21 +87,23 @@ public class HlavniProgram {
         nakresliKolecko(40);
     }
 
-    public void poziceProKresleniSnehulaka(){
+    public void presunSeNaPoziciProKresleniSnehulaka() {
         zofka.penUp();
         zofka.turnLeft(90);
         zofka.move(200);
         zofka.turnLeft(90);
         zofka.penDown();
     }
-    public void poziceProKresleniZmrliny(){
+
+    public void presunSeNaPoziciProKresleniZmrliny() {
         zofka.penUp();
         zofka.move(300);
         zofka.turnLeft(90);
         zofka.penDown();
     }
+
     public void nakresliMasinku() {
-        zofkaPosunProNakresMasinky();
+        zofkaPresunSeProNakresMasinky();
         zofka.turnRight(90);
         nakresliObdelnik(300, 150, Color.cyan);
         zofka.penUp();
@@ -126,7 +131,7 @@ public class HlavniProgram {
         zofka.move(60);
         zofka.turnLeft(135);
         zofka.penDown();
-        nakresliRovnoramennyTrojuhelnikPravyUhel(141.421d, 100,Color.BLACK);
+        nakresliRovnoramennyTrojuhelnikPravyUhel(141.421d, 100, Color.BLACK);
     }
 
     public void nakresliRovnoramennyTrojuhelnikPravyUhel(double delkaStranyA, double delkaStranyB, Color barva) {
@@ -146,23 +151,8 @@ public class HlavniProgram {
             zofka.turnLeft(1); // Otoci se o jeden stupen
         }
     }
-    public double vypocitejDelkuPrepony() {
-        double delkaPrepony;
-        double velikostStrany = 100;
-        delkaPrepony = Math.sqrt(2 * Math.pow(velikostStrany, 2));
-        System.out.println(delkaPrepony);
-        return delkaPrepony;
-    }
 
-    public double vypocitejDelkuTretiStrany(double velikostRamene, double uhelMeziRameny) {
-        double tretiStrana;
-        tretiStrana = Math.abs((velikostRamene
-                * Math.sin((uhelMeziRameny * Math.PI / 180.0) / 2))
-                * 2);
-        System.out.println(tretiStrana);
-        return tretiStrana;
-    }
-    public void zofkaPosunProNakresMasinky() {
+    public void zofkaPresunSeProNakresMasinky() {
         zofka.penUp();
         zofka.turnLeft(180);
         zofka.move(100);
